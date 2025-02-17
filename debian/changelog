@@ -1,3 +1,9 @@
+libsdl3 (3.2.4+ds-2deepin1) unstable; urgency=medium
+
+  * revert t64
+
+ -- lhdjply <lhdjply@126.com>  Mon, 17 Feb 2025 16:01:25 +0800
+
 libsdl3 (3.2.4+ds-2) unstable; urgency=medium
 
   * d/patches: Add post-release bug fixes up to
