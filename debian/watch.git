@@ -1,0 +1,11 @@
+version=4
+opts="\
+    compression=xz, \
+    dversionmangle=s/[+~](?:ds|dfsg)[0-9]*$//;s/\+(?:git)?[0-9]+(?:\+g[0-9a-f]*)?$//, \
+    mode=git, \
+    pgpmode=none, \
+    pretty=3.1.8+git%cd, \
+    repack, \
+    repacksuffix=+ds" \
+https://github.com/libsdl-org/SDL.git \
+HEAD
