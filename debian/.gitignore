@@ -1,0 +1,14 @@
+/*.debhelper.log
+/*.substvars
+/.debhelper/
+/Doxyfile
+/autoreconf.after
+/autoreconf.before
+/build-tests/
+/debhelper-build-stamp
+/files
+/libsdl3-0/
+/libsdl3-dev/
+/libsdl3-doc/
+/libsdl3-tests/
+/tmp/
