@@ -1,3 +1,9 @@
+libsdl3 (3.2.10+ds-1deepin1) unstable; urgency=medium
+
+  * Revert t64.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Fri, 27 Nov 2026 16:23:17 +0800
+
 libsdl3 (3.2.10+ds-1) unstable; urgency=medium
 
   * New upstream stable release
