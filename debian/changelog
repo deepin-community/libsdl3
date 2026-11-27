@@ -1,8 +1,62 @@
-libsdl3 (3.2.4+ds-2deepin1) unstable; urgency=medium
+libsdl3 (3.2.10+ds-1deepin1) unstable; urgency=medium
 
-  * revert t64
+  * Revert t64.
 
- -- lhdjply <lhdjply@126.com>  Mon, 17 Feb 2025 16:01:25 +0800
+ -- Tianyu Chen <sweetyfish@deepin.org>  Fri, 27 Nov 2026 16:23:17 +0800
+
+libsdl3 (3.2.10+ds-1) unstable; urgency=medium
+
+  * New upstream stable release
+  * d/patches: Add post-release bug fixes from upstream release-3.2.x
+    branch, up to commit release-3.2.10-6-g0759f22a91, excluding
+    N3DS-specific changes that are not relevant on Linux
+    - Fix Vulkan vertex buffer indexing
+    - Fix texture colour space when creating a texture from a surface
+    - Documentation improvements for high DPI
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 01 Apr 2025 14:43:02 +0100
+
+libsdl3 (3.2.8+ds-1) unstable; urgency=medium
+
+  * New upstream stable release
+  * Drop patches, applied upstream
+  * Standards-Version: 4.7.2 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 05 Mar 2025 10:24:27 +0000
+
+libsdl3 (3.2.6+ds-1) unstable; urgency=medium
+
+  * New upstream stable release
+  * d/patches: Update to upstream 3.2.x branch commit
+    release-3.2.6-5-g18d93d11e1, excluding macOS-specific changes
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 03 Mar 2025 09:45:37 +0000
+
+libsdl3 (3.2.4+git20250228+ds-1) experimental; urgency=medium
+
+  * New upstream snapshot
+    - Among many other changes, this fixes an audio capture regression
+      with PulseAudio in versions since 2.30 (Closes: #1098900)
+  * d/copyright: Update
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 28 Feb 2025 13:52:25 +0000
+
+libsdl3 (3.2.4+git20250218+ds-1) experimental; urgency=medium
+
+  * d/watch.git: Update
+  * d/gbp.conf, d/watch: Watch for git snapshots
+  * New upstream snapshot
+  * d/copyright: Update
+  * d/rules: Be more explicit about what we do and don't load dynamically
+  * d/rules: Treat testtimer as flaky when running on non-x86, non-aarch64.
+    There is an assertion that requesting a 1ms delay does not result in
+    a delay of more than 100ms, and that isn't reliably true on slow
+    machines like riscv64 or batch-processing-oriented machines like s390x,
+    resulting in test failures.
+    This makes those machines unsuitable for playing fast-paced SDL-based
+    games, but we already knew that.
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 19 Feb 2025 15:33:50 +0000
 
 libsdl3 (3.2.4+ds-2) unstable; urgency=medium
 
